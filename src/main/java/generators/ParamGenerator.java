@@ -14,12 +14,6 @@ import static utils.MyMath.getDigitsSum;
 
 public class ParamGenerator {
 
-    private static final int MIN_AGE = 10;
-    private static final int MIN_HEIGHT = 100;
-    private static final int MOD = 10;
-    private static final int MIN_WEIGHT = 30;
-    private static final double METER = 100.00;
-
     /**
      * по третьей цифре кода:
      * Глаза: 0..4
@@ -73,9 +67,9 @@ public class ParamGenerator {
      */
     public Physical GenPh(final int c) {
         final int x = c % 1000 / 100;
-        int v = (x + 1) * MIN_AGE;
-        int k = MIN_WEIGHT + x * MOD;
-        double naskolkovysokiychelovek = (MIN_HEIGHT + x * MOD) / METER;
+        int v = (x + 1) * 10;
+        int k = 30 + x * 10;
+        double naskolkovysokiychelovek = (100 + x * 10) / 100.00;
         return new Physical(v, k, naskolkovysokiychelovek);
     }
 
