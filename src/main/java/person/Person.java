@@ -27,12 +27,7 @@ public class Person {
 
     @Override
     public final String toString() {
-        final StringBuilder sb = new StringBuilder()
-                .append(id).append("\n")
-                .append(lastName).append(" ").append(firstName).append(" ").append(middleName).append("\n")
-                .append(phys).append("\n")
-                .append(appearance).append("\n")
-                .append(phone);
-        return sb.toString();
+        return id + "\n" + lastName + "\n" + firstName + "\n" +
+                middleName + "\n" + phys + "\n" + appearance + "\n" + phone;
     }
 }

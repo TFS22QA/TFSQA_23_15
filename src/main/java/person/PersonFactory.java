@@ -11,6 +11,7 @@ public class PersonFactory {
     public static Person getPerson(final String code) {
         Phone phone = new Phone("N/A");
 
+        // добавляем телефон, только если введённый код не палиндром
         if (!code.equals(new StringBuilder(code).reverse().toString())) {
             final String number = "+79"
                     + String.format("%02d", MyMath.getDigitsSum(Integer.parseInt(code)))
